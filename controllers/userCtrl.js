@@ -8,7 +8,7 @@ require('dotenv').config
 //register callback
 
 const jwtSecret = process.env.JWT_SECRET;
-// console.log('JWT_SECRET:', jwtSecret);
+
 const registerController = async (req, res) => {
   try {
     const exisitingUser = await userModel.findOne({ email: req.body.email });
